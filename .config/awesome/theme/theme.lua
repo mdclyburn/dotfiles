@@ -1,15 +1,15 @@
 ---------------------------
--- Default awesome theme --
+-- Marsh's awesome theme --
 ---------------------------
 
 theme = {}
 
 theme.font          = "sans 8"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.bg_normal     = "#1e3a57"
+theme.bg_focus      = "#2c4c6e"
+theme.bg_urgent     = "#5f7ca3"
+theme.bg_minimize   = "#3f3f44"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
