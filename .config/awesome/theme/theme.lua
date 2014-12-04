@@ -6,7 +6,7 @@ theme = {}
 
 theme.font          = "sans 8"
 
-theme.bg_normal     = "#1e3a57"
+theme.bg_normal     = "#1e3a47"
 theme.bg_focus      = "#2c4c6e"
 theme.bg_urgent     = "#5f7ca3"
 theme.bg_minimize   = "#3f3f44"
@@ -91,7 +91,7 @@ theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 
 theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
 
--- Define the icon theme for application icons. If not set then the icons 
+-- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 theme.icon_theme = nil
 
