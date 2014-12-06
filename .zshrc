@@ -11,6 +11,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+PATH=$PATH:~/bin
+
 PS1='[%n@%M %1~]$ '
 
 alias mntarchives="sudo mount -t cifs //hououin/Archives /mnt/archives -o user=marshall"
