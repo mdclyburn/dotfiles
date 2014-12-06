@@ -13,7 +13,6 @@ compinit
 
 PS1='[%n@%M %1~]$ '
 
-alias giveme="sudo pacman -S"
 alias mntarchives="sudo mount -t cifs //hououin/Archives /mnt/archives -o user=marshall"
 alias mntmusic="sudo mount -t cifs //hououin/Music /mnt/music -o user=marshall"
 alias mocp="mocp -m /mnt/music -T marsh -C ~/.moc/config"
@@ -22,3 +21,9 @@ alias resource="source ~/.zshrc"
 alias retheme="vim .config/awesome/theme/theme.lua"
 alias tlmgr="tllocalmgr"
 alias tmux="tmux -2"
+
+# Gentoo specific things
+if test $(uname -r | grep -o gentoo) = "gentoo"
+then
+	alias newconfigs="printf 'New config. files:\\n' && sudo find /etc/ -name '._cfg????_*'"
+fi
