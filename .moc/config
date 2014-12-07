@@ -103,7 +103,7 @@
 #                     documentation for more information.)
 #
 #FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
-FormatString = "%(A:%A:Unknown Album) - %(t:%t:No Title) - %(a:%a:Unknown Artist)"
+FormatString = "%(t:%t:No Title) - %(A:%A:Unknown Album) - %(a:%a:Unknown Artist)"
 
 # Input and output buffer sizes (in kilobytes).
 #InputBuffer = 512                  # Minimum value is 32KB
