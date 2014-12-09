@@ -99,7 +99,7 @@ toggle_shuffle        =
 toggle_repeat         = p
 toggle_auto_next      =
 toggle_mixer          =
-go_url                =
+go_url                = o
 
 # Volume control keys:
 volume_down_1         =
