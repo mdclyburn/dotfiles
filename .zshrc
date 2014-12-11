@@ -26,7 +26,7 @@ alias tlmgr="tllocalmgr"
 alias tmux="tmux -2"
 
 # Gentoo specific things
-if test $(uname -r | grep -o gentoo) = "gentoo"
+if test "$(uname -r | grep -o gentoo)" = "gentoo"
 then
 	alias newconfigs="printf 'New config. files:\\n' && sudo find /etc/ -name '._cfg????_*'"
 fi
