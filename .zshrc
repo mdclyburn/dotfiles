@@ -22,11 +22,16 @@ alias reconfig="vim ~/.config/awesome/rc.lua"
 alias resource="source ~/.zshrc"
 alias retheme="vim ~/.config/awesome/theme/theme.lua"
 alias rex="xrdb -merge ~/.Xresources && exit"
-alias tlmgr="tllocalmgr"
 alias tmux="tmux -2"
 
+# Arch specific things
+if test "$(uname -r | grep -o ARCH)" = "ARCH"
+then
+	alias tlmgr="tllocalmgr"
+fi
+
 # Gentoo specific things
-if test $(uname -r | grep -o gentoo) = "gentoo"
+if test "$(uname -r | grep -o gentoo)" = "gentoo"
 then
 	alias newconfigs="printf 'New config. files:\\n' && sudo find /etc/ -name '._cfg????_*'"
 fi
