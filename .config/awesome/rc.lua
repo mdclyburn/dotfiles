@@ -96,10 +96,16 @@ myawesomemenu = {
    { "Quit", awesome.quit }
 }
 
+mysystemmenu = {
+	{ "Reboot", "sudo systemctl reboot" },
+	{ "Shutdown", "sudo systemctl shutdown" }
+}
+
 mymainmenu = awful.menu({ items = {
 	{ "Chromium", "chromium" },
 	{ "Terminal", terminal },
-    { "Awesome", myawesomemenu, beautiful.awesome_icon }
+    { "Awesome", myawesomemenu, beautiful.awesome_icon },
+	{ "System", mysystemmenu }
 }})
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
