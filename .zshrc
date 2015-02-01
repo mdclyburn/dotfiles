@@ -11,7 +11,7 @@ compinit
 
 ##### Linux Settings #####
 if test "$(uname -s)" = "Linux"
-do
+then
 	PATH=$PATH:~/bin
 	PS1='[%n@%M %1~]$ '
 
@@ -34,18 +34,18 @@ do
 	then
 		alias newconfigs="printf 'New config. files:\\n' && sudo find /etc/ -name '._cfg????_*'"
 	fi
-done
+fi
 ##########################
 
 ##### OS X Settings #####
 if test "$(uname -s)" = "Darwin"
-do
+then
 	PATH=~/bin:$PATH
 	PROMPT="[%n@$(scutil --get LocalHostName) %1~]\$ "
 	autoload -U promptinit
 	promptinit
-done
+fi
 #########################
 
 ##### Universal Settings #####
-alias resource="source ~/.zsh"
+alias resource="source ~/.zshrc"
