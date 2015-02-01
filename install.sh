@@ -10,7 +10,7 @@ do
 	fi
 
 	# Link to file in this directory.
-	ln -s $file ../
+	ln -s $(basename $(pwd))/$file ../
 	printf "Linked %s\n" "$file"
 done
 
