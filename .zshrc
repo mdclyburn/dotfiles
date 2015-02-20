@@ -16,6 +16,7 @@ then
 	PS1='[%n@%M %1~]$ '
 
 	alias mntarchives="sudo mount -t cifs //hououin/Archives /mnt/archives -o user=marshall"
+	alias mntbackup="sudo mount -t cifs //hououin/Backup /mnt/backup -o user=marshall"
 	alias mntmusic="sudo mount -t cifs //hououin/Music /mnt/music -o user=marshall"
 	alias mocp="mocp -m /mnt/music -T marsh -C ~/.moc/config"
 	alias reconfig="vim ~/.config/awesome/rc.lua"
