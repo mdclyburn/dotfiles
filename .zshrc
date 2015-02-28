@@ -42,7 +42,15 @@ fi
 if test "$(uname -s)" = "Darwin"
 then
 	PATH=~/bin:$PATH
-	PROMPT="[%n@$(scutil --get LocalHostName) %1~]\$ "
+	if [ -d ~/.zsh-git-prompt ]
+	then
+		source ~/.zsh-git-prompt/zshrc.sh
+	    PROMPT='┌[%n@$(scutil --get LocalHostName) %1~]$(git_super_status)
+└> '
+	else
+		PROMPT='┌[%n@$(scutil --get LocalHostName) %1~]
+└> '
+	fi
 	autoload -U promptinit
 	promptinit
 fi
