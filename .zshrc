@@ -49,4 +49,5 @@ fi
 #########################
 
 ##### Universal Settings #####
+alias emacs="emacs -nw"
 alias resource="source ~/.zshrc"
