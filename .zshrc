@@ -13,7 +13,8 @@ compinit
 if test "$(uname -s)" = "Linux"
 then
 	PATH=$PATH:~/bin
-	PS1='[%n@%M %1~]$ '
+	PS1='┌[%n@%M %1~]
+└> '
 
 	alias mntarchives="sudo mount -t cifs //hououin/Archives /mnt/archives -o user=marshall"
 	alias mntbackup="sudo mount -t cifs //hououin/Backup /mnt/backup -o user=marshall"
