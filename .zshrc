@@ -1,7 +1,7 @@
 # Basic zsh Configuration
 HISTFILE=~/.histfile
 HISTSIZE=1000
-SAVEHIST=1000
+nSAVEHIST=1000
 bindkey -e
 
 # compinstall
@@ -46,7 +46,7 @@ then
 	if [ -d ~/.zsh-git-prompt ]
 	then
 		source ~/.zsh-git-prompt/zshrc.sh
-	    PROMPT='┌[%n@$(scutil --get LocalHostName) %1~$(git_super_status)]
+	    PROMPT='┌(\$)-[%n@$(scutil --get LocalHostName) %1~$(git_super_status)]
 └> '
 	else
 		PROMPT='┌[%n@$(scutil --get LocalHostName) %1~]
