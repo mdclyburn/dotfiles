@@ -45,7 +45,7 @@ then
 	if [ -d ~/.zsh-git-prompt ]
 	then
 		source ~/.zsh-git-prompt/zshrc.sh
-	    PROMPT='┌[%n@$(scutil --get LocalHostName) %1~]$(git_super_status)
+	    PROMPT='┌[%n@$(scutil --get LocalHostName) %1~$(git_super_status)]
 └> '
 	else
 		PROMPT='┌[%n@$(scutil --get LocalHostName) %1~]
