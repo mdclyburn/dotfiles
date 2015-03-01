@@ -43,15 +43,27 @@ fi
 if test "$(uname -s)" = "Darwin"
 then
 	PATH=~/bin:$PATH
+
+	# Prompt setup.
+	git_on() {
+		PROMPT='┌(\$)-[%M@%n %1~]$(git_super_status)
+└> '
+	}
+
+	git_off() {
+		PROMPT='┌[%n@%M %1~]
+└> '
+	}
+	
+
 	if [ -d ~/.zsh-git-prompt ]
 	then
 		source ~/.zsh-git-prompt/zshrc.sh
-	    PROMPT='┌(\$)-[%n@%M %1~$(git_super_status)]
-└> '
-	else
-		PROMPT='┌[%n@%M %1~]
-└> '
 	fi
+
+	# Default to not printing the Git info.
+	git_off
+	
 	autoload -U promptinit
 	promptinit
 fi
