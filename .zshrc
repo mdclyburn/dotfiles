@@ -46,7 +46,7 @@ then
 
 	# Prompt setup.
 	git_on() {
-		PROMPT='┌(\$)-[%M@%n %1~]$(git_super_status)
+		PROMPT='┌(\$)-[%M@%n %1~$(mprompt " %b")]
 └> '
 	}
 
