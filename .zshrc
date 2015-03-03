@@ -15,9 +15,9 @@ then
 	PATH=$PATH:~/bin
 
 	# Non-special prompt on Raspberry Pi.
-	if test "$(uname -a) | grep armv7l)" = "armv7l"
+	if test "$(uname -m)" = "armv7l"
 	then
-	    PS1='[%n@M %1~]\$ '
+	    PS1='[%n@%M %1~]$ '
 	else
 	    PS1='┌($)-[%n@%M %1~]
 └> '
