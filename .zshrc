@@ -13,8 +13,15 @@ compinit
 if test "$(uname -s)" = "Linux"
 then
 	PATH=$PATH:~/bin
-	PS1='┌($)-[%n@%M %1~]
+
+	# Non-special prompt on Raspberry Pi.
+	if test "$(uname -a) | grep armv7l)" = "armv7l"
+	then
+	    PS1='[%n@M %1~]\$ '
+	else
+	    PS1='┌($)-[%n@%M %1~]
 └> '
+	fi
 
 	alias mntarchives="sudo mount -t cifs //hououin/Archives /mnt/archives -o user=marshall"
 	alias mntbackup="sudo mount -t cifs //hououin/Backup /mnt/backup -o user=marshall"
