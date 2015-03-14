@@ -14,14 +14,7 @@ if test "$(uname -s)" = "Linux"
 then
 	PATH=$PATH:~/bin
 
-	# Non-special prompt on Raspberry Pi.
-	if test "$(uname -m)" = "armv7l"
-	then
-	    PS1='[%n@%M %1~]$ '
-	else
-	    PS1='┌($)-[%n@%M %1~]
-└> '
-	fi
+	PS1='[%n@%M %1~]$ '
 
 	alias mntarchives="sudo mount -t cifs //hououin/Archives /mnt/archives -o user=marshall"
 	alias mntbackup="sudo mount -t cifs //hououin/Backup /mnt/backup -o user=marshall"
@@ -53,13 +46,11 @@ then
 
 	# Prompt setup.
 	git_on() {
-		PROMPT='┌(\$)-[%M@%n %1~$(mprompt " %b")]
-└> '
+		PROMPT='[%n@%M %1~$(mprompt " %b")]$ '
 	}
 
 	git_off() {
-		PROMPT='┌[%n@%M %1~]
-└> '
+		PROMPT='[%n@%M %1~]$ '
 	}
 	
 
