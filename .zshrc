@@ -1,3 +1,15 @@
+# Help out TRAMP when it logs in.
+if [[ $TERM == "dumb" ]]
+then
+  unsetopt zle
+  unsetopt prompt_cr
+  unsetopt prompt_subst
+  unsetopt precmd
+  unfunction preexec
+  PS1='$ '
+  return
+fi
+
 # Basic zsh Configuration
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -44,6 +56,7 @@ if test "$(uname -s)" = "DragonFly"
 then
 	PS1='[%n@%M %1~]$ '
 fi
+#########################
 
 ##### OS X Settings #####
 if test "$(uname -s)" = "Darwin"
