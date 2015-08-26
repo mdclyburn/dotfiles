@@ -1,7 +1,7 @@
 # Basic zsh Configuration
 HISTFILE=~/.histfile
 HISTSIZE=1000
-nSAVEHIST=1000
+SAVEHIST=1000
 bindkey -e
 
 # compinstall
@@ -38,6 +38,12 @@ then
 	fi
 fi
 ##########################
+
+##### DragonFly BSD #####
+if test "$(uname -s)" = "DragonFly"
+then
+	PS1='[%n@%M %1~]$ '
+fi
 
 ##### OS X Settings #####
 if test "$(uname -s)" = "Darwin"
