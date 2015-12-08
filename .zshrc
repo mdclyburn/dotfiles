@@ -61,7 +61,7 @@ fi
 ##### OS X Settings #####
 if test "$(uname -s)" = "Darwin"
 then
-	PATH=~/bin:$PATH
+	PATH=~/bin:/usr/local/bin:$PATH
 
 	# Prompt setup.
 	git_on() {
