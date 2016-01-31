@@ -52,7 +52,7 @@ fi
 ##########################
 
 ##### DragonFly BSD #####
-if test "$(uname -s)" = "DragonFly"
+if test "$(uname -s | grep -o BSD)" = "BSD"
 then
 	PS1='[%n@%M %1~]$ '
 fi
