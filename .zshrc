@@ -25,7 +25,9 @@ compinit
 PATH=~/bin:~/.gem/ruby/2.0.0/bin:$PATH
 PS1='[%n %1~]%% '
 
+EDITOR=vim
 PAGER=less
+export EDITOR PAGER PATH
 
 # Aliases
 alias ocaml="ledit ocaml"
